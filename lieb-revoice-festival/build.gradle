@@ -9,12 +9,12 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    
     id 'groovy'
 }
 
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()	
     jcenter()
 }
 
@@ -27,4 +27,14 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
+    // Use the litengine for the game
+    compile 'de.gurkenlabs:litiengine:0.4.20'
+}
+
+sourceSets {
+  main.java.srcDir "src"
+  main.resources.srcDirs = ["sprites", "audio", "maps", "misc"]
+
+  // main.resources.includes = ["game.litidata"]
 }
