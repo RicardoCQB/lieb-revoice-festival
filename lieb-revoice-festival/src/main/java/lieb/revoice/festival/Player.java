@@ -19,26 +19,48 @@ import de.gurkenlabs.litiengine.physics.IMovementController;
 public class Player extends Creature implements IUpdateable {
 
 	public static final int MAX_ADDITIONAL_JUMPS = 2;
-	
+
 	private static Player instance;
-	
+
 	private final Jump jump;
-	
+
 	private int consecutiveJumps;
-	
+
 	private Player() {
 		super("Freddie Mercury");
-		
+
 		// setup the player's abilities
-	    this.jump = new Jump(this);
+		this.jump = new Jump(this);
 	}
-	
+
+	public static Player instance() {
+		if (instance == null) {
+			instance = new Player();
+		}
+
+		return instance;
+	}
+
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
-		
+		// reset the number of consecutive jumps when touching the ground
+		if (this.isTouchingGround()) {
+			this.consecutiveJumps = 0;
+		}
 	}
-	
-	
-	
-}
+
+	private boolean isTouchingGround() {
+		//It collides with the ground (a) of with any (b) static box.
+		Rectangle2D groundCheck = new Rectangle2D.Double(
+				this.getCollisionBox().getX(), this.getCollisionBox().getY(), 
+				this.getCollisionBoxWidth(), this.getCollisionBoxHeight() + 1);
+		
+		if(groundCheck.getMaxY() > Game.physics().getBounds().getMaxX()) {
+			return true;
+		}
+
+		return Game.physics().collides(groundCheck, Collision.STATIC);
+	}
+
+
+	}
