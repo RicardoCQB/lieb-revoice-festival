@@ -26,8 +26,12 @@
 			<attribute name="gradle_used_by_scope" value="test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
-	<classpathentry kind="lib" path="litiengine-0.4.20.jar" sourcepath="C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/litiengine-0.4.20"/>
+	<classpathentry kind="lib" path="litiengine-0.4.20.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

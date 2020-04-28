@@ -259,3 +259,13 @@ java.lang.NullPointerException
 	at lieb.revoice.festival.MenuScreen.<init>(MenuScreen.java:29)
 	at lieb.revoice.festival.Program.main(Program.java:28)
 
+abr. 25, 2020 5:38:11 DA TARDE de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/select.wav could not be loaded.
+abr. 25, 2020 5:38:12 DA TARDE de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/select.wav could not be loaded.
+abr. 25, 2020 5:38:12 DA TARDE de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/select.wav could not be loaded.
+abr. 25, 2020 5:38:13 DA TARDE de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/select.wav could not be loaded.
+abr. 25, 2020 5:38:13 DA TARDE de.gurkenlabs.litiengine.resources.Sounds load
+SEVERE: The audio file file:/C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/confirm.wav could not be loaded.
