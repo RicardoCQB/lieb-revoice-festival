@@ -27,7 +27,7 @@ public class Player extends Creature implements IUpdateable {
 	private int consecutiveJumps;
 
 	private Player() {
-		super("Freddie Mercury");
+		super("hero");
 
 		// setup the player's abilities
 		this.jump = new Jump(this);

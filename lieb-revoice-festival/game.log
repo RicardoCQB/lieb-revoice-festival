@@ -275,3 +275,19 @@ abr. 28, 2020 10:33:19 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xm
 WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
 abr. 28, 2020 10:34:38 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:36:41 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:42:37 AM de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:42:41 AM de.gurkenlabs.litiengine.gui.screens.ScreenManager display
+WARNING: Could not display the screen INGAME because there is no screen with the specified name.
+abr. 28, 2020 10:43:41 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:43:45 DA MANHÃ de.gurkenlabs.litiengine.gui.screens.ScreenManager display
+WARNING: Could not display the screen INGAME because there is no screen with the specified name.
+abr. 28, 2020 10:45:07 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:45:54 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:46:31 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.

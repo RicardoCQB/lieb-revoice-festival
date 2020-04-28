@@ -9,7 +9,7 @@ import de.gurkenlabs.litiengine.gui.screens.GameScreen;
 import de.gurkenlabs.litiengine.resources.Resources;
 import de.gurkenlabs.litiengine.sound.Sound;
 
-public class IngameScreen extends GameScreen implements IUpdateable {
+public class IngameScreen extends GameScreen {
 
 	public static final String SCREEN_NAME = "INGAME";
 	// public static Sound MENU_MUSIC = Resources.sounds().get("menuMusic.wav");
@@ -21,18 +21,11 @@ public class IngameScreen extends GameScreen implements IUpdateable {
 	@Override
 	public void prepare() {
 		super.prepare();	
-		Game.world().loadEnvironment("forest");
-	}
-	
-	@Override
-	public void update() {
+		Game.loop().perform(1500, () -> {	      
+	        Game.window().getRenderComponent().fadeIn(1500);
+	        Game.world().loadEnvironment("forest");
+	        //Game.audio().playMusic(Resources.sounds().get("pumpkinville.ogg"));
+	      });
 	}
 
-	@Override
-	public void render(final Graphics2D g) {
-		if (Game.world().environment() != null) {
-			Game.world().environment().render(g);
-		}
-		super.render(g);
-	}
 }
