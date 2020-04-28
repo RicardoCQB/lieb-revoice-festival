@@ -15,7 +15,7 @@ import de.gurkenlabs.litiengine.physics.IMovementController;
 
 @EntityInfo(width = 18, height = 18)
 @MovementInfo(velocity = 200)
-@CollisionInfo(collisionBoxWidth = 8, collisionBoxHeight = 16, collision = true)
+@CollisionInfo(collisionBoxWidth = 50, collisionBoxHeight = 140, collision = true)
 public class Player extends Creature implements IUpdateable {
 
 	public static final int MAX_ADDITIONAL_JUMPS = 10;
