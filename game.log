@@ -157,3 +157,106 @@ java.lang.IllegalArgumentException: Invalid sprite dimensions (hero-preview)! Sp
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
 
+abr. 28, 2020 10:25:28 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "null" is greater than the supported version 1.2.x. Some features may not work.
+abr. 28, 2020 10:25:28 DA MANHÃ de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+de.gurkenlabs.litiengine.resources.ResourceLoadException: de.gurkenlabs.litiengine.resources.ResourceLoadException: de.gurkenlabs.litiengine.environment.tilemap.xml.TmxException: javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\forest\tileset\forest background.tsx (O sistema não conseguiu localizar o caminho especificado)]
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:391)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:273)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:207)
+	at de.gurkenlabs.utiliti.components.MapComponent.lambda$importMap$7(MapComponent.java:703)
+	at de.gurkenlabs.utiliti.swing.dialogs.XmlImportDialog.importXml(XmlImportDialog.java:33)
+	at de.gurkenlabs.utiliti.components.MapComponent.importMap(MapComponent.java:700)
+	at de.gurkenlabs.utiliti.swing.menus.MapMenu.lambda$new$0(MapMenu.java:33)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: de.gurkenlabs.litiengine.resources.ResourceLoadException: de.gurkenlabs.litiengine.environment.tilemap.xml.TmxException: javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\forest\tileset\forest background.tsx (O sistema não conseguiu localizar o caminho especificado)]
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:391)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:273)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:278)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:211)
+	at de.gurkenlabs.litiengine.environment.tilemap.xml.Tileset.finish(Tileset.java:208)
+	at de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap.finish(TmxMap.java:305)
+	at de.gurkenlabs.litiengine.resources.Maps.load(Maps.java:37)
+	at de.gurkenlabs.litiengine.resources.Maps.load(Maps.java:15)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:389)
+	... 44 more
+Caused by: de.gurkenlabs.litiengine.environment.tilemap.xml.TmxException: javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\forest\tileset\forest background.tsx (O sistema não conseguiu localizar o caminho especificado)]
+	at de.gurkenlabs.litiengine.resources.Tilesets.load(Tilesets.java:25)
+	at de.gurkenlabs.litiengine.resources.Tilesets.load(Tilesets.java:13)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:389)
+	... 53 more
+Caused by: javax.xml.bind.UnmarshalException
+ - with linked exception:
+[java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\forest\tileset\forest background.tsx (O sistema não conseguiu localizar o caminho especificado)]
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:231)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal(UnmarshallerImpl.java:199)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:170)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:175)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:184)
+	at de.gurkenlabs.litiengine.util.io.XmlUtilities.read(XmlUtilities.java:94)
+	at de.gurkenlabs.litiengine.resources.Tilesets.load(Tilesets.java:21)
+	... 55 more
+Caused by: java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\forest\tileset\forest background.tsx (O sistema não conseguiu localizar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:228)
+	... 61 more
+
+abr. 28, 2020 10:30:20 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "null" is greater than the supported version 1.2.x. Some features may not work.

@@ -16,7 +16,6 @@ import de.gurkenlabs.litiengine.sound.Sound;
 public class MenuScreen extends Screen implements IUpdateable {
 	public static final String SCREEN_NAME = "MENU";
 	public static Sound MENU_MUSIC = Resources.sounds().get("menuMusic.wav");
-	private ImageComponent playButton;
 	private Menu mainMenu;
 
 	public MenuScreen() {
@@ -97,6 +96,13 @@ public class MenuScreen extends Screen implements IUpdateable {
 	@Override
 	public void update() {
 	}
+	
+	@Override
+	  public void suspend() {
+	    super.suspend();
+	    Game.loop().detach(this);
+	    Game.audio().stopMusic();
+	  }
 	
 	private void startGame() {
 		this.mainMenu.setEnabled(false);
