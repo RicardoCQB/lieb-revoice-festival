@@ -14,11 +14,11 @@ import de.gurkenlabs.litiengine.physics.Collision;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
 @EntityInfo(width = 18, height = 18)
-@MovementInfo(velocity = 100)
+@MovementInfo(velocity = 200)
 @CollisionInfo(collisionBoxWidth = 8, collisionBoxHeight = 16, collision = true)
 public class Player extends Creature implements IUpdateable {
 
-	public static final int MAX_ADDITIONAL_JUMPS = 2;
+	public static final int MAX_ADDITIONAL_JUMPS = 10;
 
 	private static Player instance;
 
@@ -50,6 +50,13 @@ public class Player extends Creature implements IUpdateable {
 			this.consecutiveJumps = 0;
 		}
 	}
+	
+	@Override
+	  protected IMovementController createMovementController() {
+	    // setup movement controller
+	    return new PlatformingMovementController<>(this);
+	  }
+
 
 	private boolean isTouchingGround() {
 		//It collides with the ground (a) of with any (b) static box.
@@ -64,5 +71,22 @@ public class Player extends Creature implements IUpdateable {
 		return Game.physics().collides(groundCheck, Collision.STATIC);
 	}
 
+	/**
+	   * Checks whether this instance can currently jump and then performs the <code>Jump</code> ability.
+	   * <p>
+	   * <i>Note that the name of this methods needs to be equal to {@link PlatformingMovementController#JUMP}} in order for the controller to be able to
+	   * use this method. <br>
+	   * Another option is to explicitly specify the <code>Action.name()</code> attribute on the annotation.</i>
+	   * </p>
+	   */
+	  @Action(description = "This performs the jump ability for the player's entity.")
+	  public void jump() {
+	    if (this.consecutiveJumps >= MAX_ADDITIONAL_JUMPS || !this.jump.canCast()) {
+	      return;
+	    }
+
+	    this.jump.cast();
+	    this.consecutiveJumps++;
+	  }
 
 	}

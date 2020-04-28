@@ -20,8 +20,8 @@ public class GameLogic {
 		Game.world().setCamera(camera);
 
 		// set a basic gravity for all levels.
-		Game.world().setGravity(120);
-		Game.graphics().setBaseRenderScale(1.001f);
+		Game.world().setGravity(100);
+		Game.graphics().setBaseRenderScale(0.901f);
 		// add default game logic for when a level was loaded
 		Game.world().addLoadedListener(e -> {
 
