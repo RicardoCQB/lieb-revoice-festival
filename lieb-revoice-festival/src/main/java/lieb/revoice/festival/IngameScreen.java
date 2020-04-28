@@ -23,7 +23,9 @@ public class IngameScreen extends GameScreen {
 		super.prepare();	
 		Game.loop().perform(1500, () -> {	      
 	        Game.window().getRenderComponent().fadeIn(1500);
+	        GameLogic.init();
 	        Game.world().loadEnvironment("forest");
+	        
 	        //Game.audio().playMusic(Resources.sounds().get("pumpkinville.ogg"));
 	      });
 	}

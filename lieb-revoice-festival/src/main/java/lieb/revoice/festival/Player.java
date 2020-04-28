@@ -14,7 +14,7 @@ import de.gurkenlabs.litiengine.physics.Collision;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 
 @EntityInfo(width = 18, height = 18)
-@MovementInfo(velocity = 70)
+@MovementInfo(velocity = 100)
 @CollisionInfo(collisionBoxWidth = 8, collisionBoxHeight = 16, collision = true)
 public class Player extends Creature implements IUpdateable {
 
@@ -27,8 +27,10 @@ public class Player extends Creature implements IUpdateable {
 	private int consecutiveJumps;
 
 	private Player() {
-		super("hero");
+		super("frankmars");
 
+		// setup movement controller
+	    this.addController(new PlatformingMovementController<>(this));
 		// setup the player's abilities
 		this.jump = new Jump(this);
 	}
