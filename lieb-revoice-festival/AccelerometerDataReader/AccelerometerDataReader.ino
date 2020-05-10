@@ -30,12 +30,13 @@ void setup() {
 void loop() { // Need to substiture the serial.prints for textfile.prints
   if (accel.available()) {      // Wait for new data from accelerometer
     // Acceleration of x, y, and z directions in g units
-    Serial.print(accel.getCalculatedX(), 3);
+    /*Serial.print(accel.getCalculatedX(), 3);
     Serial.print("\t");
     Serial.print(accel.getCalculatedY(), 3);
-    Serial.print("\t");
-    Serial.print(accel.getCalculatedZ(), 3);
+    Serial.print("\t");*/
+    Serial.print(accel.getCalculatedZ(), 1);
     Serial.println();
+    delay(100);
   }
   
 }
