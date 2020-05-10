@@ -34,8 +34,7 @@ void loop() { // Need to substiture the serial.prints for textfile.prints
     Serial.print("\t");
     Serial.print(accel.getCalculatedY(), 3);
     Serial.print("\t");*/
-    Serial.print(accel.getCalculatedZ(), 1);
-    Serial.println();
+    Serial.print(abs(accel.getCalculatedZ()), 0);
     delay(100);
   }
   
