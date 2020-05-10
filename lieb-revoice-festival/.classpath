@@ -33,5 +33,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="lib" path="litiengine-0.4.20.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ricardo/source/repos/lieb-revoice-festival/lieb-revoice-festival/jSerialComm-2.6.2.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
