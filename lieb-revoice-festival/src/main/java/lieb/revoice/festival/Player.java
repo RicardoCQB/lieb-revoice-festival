@@ -1,5 +1,7 @@
 package lieb.revoice.festival;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 
 import de.gurkenlabs.litiengine.Game;
@@ -25,10 +27,28 @@ public class Player extends Creature implements IUpdateable {
 	private final Jump jump;
 
 	private int consecutiveJumps;
+	
+	private AccelerometerJump acJump;
+	
+	private char previousAcStatus;
+	private char currentAcStatus;
+	
+	private static Robot robo;
 
 	private Player() {
 		super("frankmars");
 
+		acJump = new AccelerometerJump();
+		previousAcStatus = 0;
+		currentAcStatus = 0;
+		try {
+			robo = new Robot();
+		}
+		catch (Exception exp) 
+	     {
+	             exp.printStackTrace();
+	     }	
+		
 		// setup movement controller
 	    this.addController(new PlatformingMovementController<>(this));
 		// setup the player's abilities
@@ -44,11 +64,18 @@ public class Player extends Creature implements IUpdateable {
 	}
 
 	@Override
-	public void update() {
+	public void update() {		
 		// reset the number of consecutive jumps when touching the ground
 		if (this.isTouchingGround()) {
 			this.consecutiveJumps = 0;
 		}
+		previousAcStatus = currentAcStatus;
+		currentAcStatus = acJump.getAccelerometerStatus();
+		
+		if(previousAcStatus == '0' && currentAcStatus == '1') {
+			robo.keyPress(KeyEvent.VK_SPACE);
+        	robo.keyRelease(KeyEvent.VK_SPACE);
+		}			
 	}
 	
 	@Override
