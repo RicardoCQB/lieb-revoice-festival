@@ -29,7 +29,10 @@ public class GameLogic {
 			Spawnpoint enter = e.getSpawnpoint("enter");
 			if (enter != null) {
 				enter.spawn(Player.instance());
+				AccelerometerJump acJump = new AccelerometerJump();
 			}
+			
+			
 		});
 	}
 }
