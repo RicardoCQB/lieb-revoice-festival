@@ -21,7 +21,6 @@ public class Program {
 	    
 	    // Load data from the utiLITI game file
 	    Resources.load("game.litidata");
-	    //Resources.load("maps\forest\forest.tmx");
 	    
 	    // Set the icon for the game
 	    Game.window().setIcon(Resources.images().get("icon.png"));
@@ -32,5 +31,5 @@ public class Program {
 	    Game.start();
 	    
 	}
-
+           
 }

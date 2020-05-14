@@ -437,3 +437,133 @@ mai. 12, 2020 12:40:11 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml
 WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
 mai. 12, 2020 12:41:11 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
 WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 12, 2020 4:27:24 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 10:40:56 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:39:22 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:40:19 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:41:25 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:42:46 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:44:32 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:45:43 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 13, 2020 11:46:39 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:02:31 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:04:44 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:05:33 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:13:42 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:14:28 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:15:49 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:19:19 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:22:25 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:39:12 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 12:41:12 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 3:40:49 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 3:56:13 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 3:56:19 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException
+	at de.gurkenlabs.litiengine.graphics.animation.Animation.<init>(Animation.java:74)
+	at lieb.revoice.festival.Jump$JumpEffect.<init>(Jump.java:39)
+	at lieb.revoice.festival.Jump.<init>(Jump.java:30)
+	at lieb.revoice.festival.Player.<init>(Player.java:35)
+	at lieb.revoice.festival.Player.instance(Player.java:41)
+	at lieb.revoice.festival.GameLogic.init(GameLogic.java:18)
+	at lieb.revoice.festival.IngameScreen.lambda$0(IngameScreen.java:26)
+	at de.gurkenlabs.litiengine.GameLoop.executeTimedActions(GameLoop.java:104)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+mai. 14, 2020 3:57:15 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 3:57:20 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException
+	at de.gurkenlabs.litiengine.graphics.animation.Animation.<init>(Animation.java:74)
+	at lieb.revoice.festival.Jump$JumpEffect.<init>(Jump.java:39)
+	at lieb.revoice.festival.Jump.<init>(Jump.java:30)
+	at lieb.revoice.festival.Player.<init>(Player.java:35)
+	at lieb.revoice.festival.Player.instance(Player.java:41)
+	at lieb.revoice.festival.GameLogic.init(GameLogic.java:18)
+	at lieb.revoice.festival.IngameScreen.lambda$0(IngameScreen.java:26)
+	at de.gurkenlabs.litiengine.GameLoop.executeTimedActions(GameLoop.java:104)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+mai. 14, 2020 4:05:42 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 4:06:02 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 4:07:10 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 4:07:55 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 4:39:15 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:10:06 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:10:12 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException
+	at de.gurkenlabs.litiengine.resources.Spritesheets.getCustomKeyFrameDurations(Spritesheets.java:90)
+	at de.gurkenlabs.litiengine.graphics.animation.AnimationController.<init>(AnimationController.java:98)
+	at lieb.revoice.festival.Player.<init>(Player.java:42)
+	at lieb.revoice.festival.Player.instance(Player.java:47)
+	at lieb.revoice.festival.GameLogic.init(GameLogic.java:18)
+	at lieb.revoice.festival.IngameScreen.lambda$0(IngameScreen.java:26)
+	at de.gurkenlabs.litiengine.GameLoop.executeTimedActions(GameLoop.java:104)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+mai. 14, 2020 5:10:44 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:10:49 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+java.lang.NullPointerException
+	at de.gurkenlabs.litiengine.resources.Spritesheets.getCustomKeyFrameDurations(Spritesheets.java:90)
+	at de.gurkenlabs.litiengine.graphics.animation.AnimationController.<init>(AnimationController.java:98)
+	at lieb.revoice.festival.Player.<init>(Player.java:42)
+	at lieb.revoice.festival.Player.instance(Player.java:47)
+	at lieb.revoice.festival.GameLogic.init(GameLogic.java:18)
+	at lieb.revoice.festival.IngameScreen.lambda$0(IngameScreen.java:26)
+	at de.gurkenlabs.litiengine.GameLoop.executeTimedActions(GameLoop.java:104)
+	at de.gurkenlabs.litiengine.GameLoop.process(GameLoop.java:83)
+	at de.gurkenlabs.litiengine.UpdateLoop.run(UpdateLoop.java:57)
+
+mai. 14, 2020 5:13:45 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:17:55 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:20:43 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:22:57 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:24:12 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:25:39 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:29:25 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:30:27 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 14, 2020 5:32:07 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.

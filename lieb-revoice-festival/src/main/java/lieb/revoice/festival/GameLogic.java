@@ -20,19 +20,20 @@ public class GameLogic {
 		Game.world().setCamera(camera);
 
 		// set a basic gravity for all levels.
-		Game.world().setGravity(200);
+		Game.world().setGravity(300);
 		Game.graphics().setBaseRenderScale(0.901f);
-		// add default game logic for when a level was loaded
+		// add default game logic for when a level is loaded
 		Game.world().addLoadedListener(e -> {
 
 			// spawn the player instance on the spawn point with the name "enter"
 			Spawnpoint enter = e.getSpawnpoint("enter");
 			if (enter != null) {
-				enter.spawn(Player.instance());
-				AccelerometerJump acJump = new AccelerometerJump();
+				enter.spawn(Player.instance());				
 			}
-			
-			
 		});
+		
+		AccelerometerJump AJ = new AccelerometerJump();
+		
+		Game.inputLoop().attach(AJ);
 	}
 }
