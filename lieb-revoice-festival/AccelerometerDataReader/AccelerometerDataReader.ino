@@ -14,17 +14,21 @@
 #include <Wire.h>;
 #include "SparkFun_MMA8452Q.h"; // Accelerometer library: http://librarymanager/All#SparkFun_MMA8452Q
 
-MMA8452Q accel; 
+MMA8452Q accel;
+double previousAcStatus;
+double acStatus;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("MMA8452Q Reading Data:");
   Wire.begin();
 
   if (accel.begin() == false) {
     Serial.println("Not Connected. Please check connections and read the hookup guide.");
     while (1);
   }
+
+  previousAcStatus = 0;
+  acStatus = 0;
 }
 
 void loop() { // Need to substiture the serial.prints for textfile.prints
@@ -34,7 +38,18 @@ void loop() { // Need to substiture the serial.prints for textfile.prints
     Serial.print("\t");
     Serial.print(accel.getCalculatedY(), 3);
     Serial.print("\t");*/
-    Serial.print(abs(accel.getCalculatedZ()), 0);
+    previousAcStatus = acStatus;
+    delay(200);
+    acStatus = abs(accel.getCalculatedZ());
+  
+    /*Serial.print(previousAcStatus, 2);
+    Serial.print("\t");
+    Serial.print(acStatus, 2);
+    Serial.println();*/
+
+    if(previousAcStatus < 0.5 && acStatus > 0.6){
+      Serial.println("1");
+    }    
   }
   
 }
