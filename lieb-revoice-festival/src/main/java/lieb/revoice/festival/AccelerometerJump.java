@@ -13,7 +13,6 @@ public class AccelerometerJump implements IUpdateable{
 	private static AccelerometerJump instance;
 	private static SerialPort comPort;
 	private InputStream in;
-	private char previousAcStatus;
 	private char currentAcStatus;	
 	private static Robot robo;
 	
@@ -23,8 +22,6 @@ public class AccelerometerJump implements IUpdateable{
 		comPort.openPort();
 		comPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 0, 0);
 		in = comPort.getInputStream();
-		
-		previousAcStatus = '0';
 		currentAcStatus = '0';
 		try {
 			robo = new Robot();
@@ -63,20 +60,19 @@ public class AccelerometerJump implements IUpdateable{
 	
 	@Override
 	public void update() {
-		
-		previousAcStatus = currentAcStatus;
-		
+					
 		try {
 			currentAcStatus = (char) in.read();
-			System.out.println(currentAcStatus);
+			System.out.print(currentAcStatus);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
 		
-		if(previousAcStatus == '0' && currentAcStatus == '1') {
-			//robo.keyPress(KeyEvent.VK_SPACE);
-        	//robo.keyRelease(KeyEvent.VK_SPACE);
-			System.out.println("JUMPED.");
+		if(currentAcStatus == '1') {
+			robo.keyPress(KeyEvent.VK_SPACE);
+        	robo.keyRelease(KeyEvent.VK_SPACE);
+			System.out.print("JUMPED.");
+			currentAcStatus = '0';
 		}
 		
 	}

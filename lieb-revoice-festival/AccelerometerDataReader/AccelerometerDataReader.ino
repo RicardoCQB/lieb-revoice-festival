@@ -9,7 +9,7 @@
   level-shifting between the Arduino and the breakout. Series
   resistors on the SDA and SCL lines should do the trick.*/
 
-  /* See this :https://learn.sparkfun.com/tutorials/mma8452q-accelerometer-breakout-hookup-guide/all */
+/* See this :https://learn.sparkfun.com/tutorials/mma8452q-accelerometer-breakout-hookup-guide/all */
 
 #include <Wire.h>;
 #include "SparkFun_MMA8452Q.h"; // Accelerometer library: http://librarymanager/All#SparkFun_MMA8452Q
@@ -17,6 +17,8 @@
 MMA8452Q accel;
 double previousAcStatus;
 double acStatus;
+unsigned long previousMillis = 0;
+const long interval = 300;
 
 void setup() {
   Serial.begin(9600);
@@ -35,21 +37,30 @@ void loop() { // Need to substiture the serial.prints for textfile.prints
   if (accel.available()) {      // Wait for new data from accelerometer
     // Acceleration of x, y, and z directions in g units
     /*Serial.print(accel.getCalculatedX(), 3);
-    Serial.print("\t");
-    Serial.print(accel.getCalculatedY(), 3);
-    Serial.print("\t");*/
+      Serial.print("\t");
+      Serial.print(accel.getCalculatedY(), 3);
+      Serial.print("\t");*/
     previousAcStatus = acStatus;
-    delay(200);
-    acStatus = abs(accel.getCalculatedZ());
-  
-    /*Serial.print(previousAcStatus, 2);
-    Serial.print("\t");
-    Serial.print(acStatus, 2);
-    Serial.println();*/
 
-    if(previousAcStatus < 0.5 && acStatus > 0.6){
-      Serial.println("1");
-    }    
+    unsigned long currentMillis = millis();
+
+    if (currentMillis - previousMillis >= interval) {
+      previousMillis = currentMillis;
+
+      acStatus = abs(accel.getCalculatedZ());
+
+      /*Serial.print(previousAcStatus, 2);
+        Serial.print("\t");
+        Serial.print(acStatus, 2);
+        Serial.println();*/
+
+      if (previousAcStatus < 0.5 && acStatus > 0.6) {
+        Serial.print('1');
+      }
+      else {
+        Serial.print('0');
+      }
+    }
   }
-  
+
 }
