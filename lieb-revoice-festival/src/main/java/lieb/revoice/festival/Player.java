@@ -24,7 +24,7 @@ import de.gurkenlabs.litiengine.resources.Resources;
 public class Player extends Creature implements IUpdateable {
 
 	public static final int MAX_ADDITIONAL_JUMPS = 1;
-
+ 
 	private static Player instance;
 
 	private final Jump jump;

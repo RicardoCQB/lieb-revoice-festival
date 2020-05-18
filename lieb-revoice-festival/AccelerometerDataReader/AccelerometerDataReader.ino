@@ -58,8 +58,11 @@ void loop() { // Need to substiture the serial.prints for textfile.prints
         Serial.print('1');
       }
       else {
-        Serial.print('0');
+        Serial.print(' ');
       }
+    }
+    else {
+      //Serial.print(' ');
     }
   }
 
