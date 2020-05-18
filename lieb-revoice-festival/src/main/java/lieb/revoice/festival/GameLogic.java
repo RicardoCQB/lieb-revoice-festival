@@ -34,6 +34,6 @@ public class GameLogic {
 		
 		AccelerometerJump AJ = new AccelerometerJump();
 		
-		Game.inputLoop().attach(AJ);
+		//Game.inputLoop().attach(AJ);
 	}
 }

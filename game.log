@@ -259,3 +259,231 @@ java.lang.IllegalArgumentException: Invalid sprite dimensions (frankmars-idle-ri
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
 
+mai. 18, 2020 11:41:00 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 18, 2020 11:46:55 DA TARDE de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "null" is greater than the supported version 1.2.x. Some features may not work.
+mai. 18, 2020 11:46:57 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+de.gurkenlabs.litiengine.resources.ResourceLoadException: javax.imageio.IIOException: Can't get input stream from URL!
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:391)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:264)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:278)
+	at de.gurkenlabs.litiengine.resources.Spritesheets.load(Spritesheets.java:106)
+	at de.gurkenlabs.utiliti.components.Editor.loadTileset(Editor.java:595)
+	at de.gurkenlabs.utiliti.components.MapComponent.lambda$importMap$7(MapComponent.java:742)
+	at de.gurkenlabs.utiliti.swing.dialogs.XmlImportDialog.importXml(XmlImportDialog.java:33)
+	at de.gurkenlabs.utiliti.components.MapComponent.importMap(MapComponent.java:700)
+	at de.gurkenlabs.utiliti.swing.menus.MapMenu.lambda$new$0(MapMenu.java:33)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: javax.imageio.IIOException: Can't get input stream from URL!
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1407)
+	at de.gurkenlabs.litiengine.resources.Images.load(Images.java:49)
+	at de.gurkenlabs.litiengine.resources.Images.load(Images.java:12)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:389)
+	... 45 more
+Caused by: java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\tents\background\tents background 1600x1600.png (O sistema não conseguiu localizar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.base/java.net.URL.openStream(URL.java:1167)
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1405)
+	... 48 more
+
+mai. 18, 2020 11:49:22 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+de.gurkenlabs.litiengine.resources.ResourceLoadException: javax.imageio.IIOException: Can't get input stream from URL!
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:391)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:264)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:278)
+	at de.gurkenlabs.litiengine.resources.Spritesheets.load(Spritesheets.java:106)
+	at de.gurkenlabs.utiliti.components.Editor.loadTileset(Editor.java:595)
+	at de.gurkenlabs.utiliti.components.Editor.lambda$importTilesets$10(Editor.java:556)
+	at de.gurkenlabs.utiliti.swing.dialogs.XmlImportDialog.importXml(XmlImportDialog.java:33)
+	at de.gurkenlabs.utiliti.components.Editor.importTilesets(Editor.java:541)
+	at de.gurkenlabs.utiliti.swing.menus.ResourcesMenu.lambda$new$6(ResourcesMenu.java:46)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: javax.imageio.IIOException: Can't get input stream from URL!
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1407)
+	at de.gurkenlabs.litiengine.resources.Images.load(Images.java:49)
+	at de.gurkenlabs.litiengine.resources.Images.load(Images.java:12)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:389)
+	... 45 more
+Caused by: java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\tents\background\tents background 1600x1600.png (O sistema não conseguiu localizar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.base/java.net.URL.openStream(URL.java:1167)
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1405)
+	... 48 more
+
+mai. 18, 2020 11:49:45 DA TARDE de.gurkenlabs.litiengine.DefaultUncaughtExceptionHandler uncaughtException
+SEVERE: Game crashed! :(
+de.gurkenlabs.litiengine.resources.ResourceLoadException: javax.imageio.IIOException: Can't get input stream from URL!
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:391)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:264)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.get(ResourcesContainer.java:278)
+	at de.gurkenlabs.litiengine.resources.Spritesheets.load(Spritesheets.java:106)
+	at de.gurkenlabs.utiliti.components.Editor.loadTileset(Editor.java:595)
+	at de.gurkenlabs.utiliti.components.Editor.lambda$importTilesets$10(Editor.java:556)
+	at de.gurkenlabs.utiliti.swing.dialogs.XmlImportDialog.importXml(XmlImportDialog.java:33)
+	at de.gurkenlabs.utiliti.components.Editor.importTilesets(Editor.java:541)
+	at de.gurkenlabs.utiliti.swing.menus.ResourcesMenu.lambda$new$6(ResourcesMenu.java:46)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:369)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1020)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1064)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6636)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6401)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5012)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4919)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4548)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4489)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2764)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4844)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: javax.imageio.IIOException: Can't get input stream from URL!
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1407)
+	at de.gurkenlabs.litiengine.resources.Images.load(Images.java:49)
+	at de.gurkenlabs.litiengine.resources.Images.load(Images.java:12)
+	at de.gurkenlabs.litiengine.resources.ResourcesContainer.loadResource(ResourcesContainer.java:389)
+	... 45 more
+Caused by: java.io.FileNotFoundException: C:\Users\Ricardo\source\repos\lieb-revoice-festival\lieb-revoice-festival\maps\tents\background\tents background 1600x1600.png (O sistema não conseguiu localizar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:212)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:154)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:109)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.base/java.net.URL.openStream(URL.java:1167)
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1405)
+	... 48 more
+
+mai. 19, 2020 12:01:09 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:01:22 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "null" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:16:49 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "null" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:18:53 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "null" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:32:28 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:32:28 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "stages" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:32:28 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "tents" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:47:17 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:47:17 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "stages" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:47:18 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "tents" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:51:16 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "forest" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:51:16 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "stages" is greater than the supported version 1.2.x. Some features may not work.
+mai. 19, 2020 12:51:16 DA MANHÃ de.gurkenlabs.litiengine.environment.tilemap.xml.TmxMap checkVersion
+WARNING: Tiled version 1.3.4 of map "tents" is greater than the supported version 1.2.x. Some features may not work.

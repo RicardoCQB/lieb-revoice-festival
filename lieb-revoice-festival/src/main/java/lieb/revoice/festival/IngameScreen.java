@@ -13,9 +13,12 @@ public class IngameScreen extends GameScreen {
 
 	public static final String SCREEN_NAME = "INGAME";
 	// public static Sound MENU_MUSIC = Resources.sounds().get("menuMusic.wav");
+	
+	public static String mapName;
 
-	public IngameScreen() {
+	public IngameScreen(String mapName) {
 		super(SCREEN_NAME);
+		IngameScreen.mapName = mapName;
 	}
 
 	@Override
@@ -24,7 +27,7 @@ public class IngameScreen extends GameScreen {
 		Game.loop().perform(1500, () -> {	      
 	        Game.window().getRenderComponent().fadeIn(1500);
 	        GameLogic.init();
-	        Game.world().loadEnvironment("forest");
+	        Game.world().loadEnvironment(mapName);
 	        
 	        //Game.audio().playMusic(Resources.sounds().get("pumpkinville.ogg"));
 	      });
