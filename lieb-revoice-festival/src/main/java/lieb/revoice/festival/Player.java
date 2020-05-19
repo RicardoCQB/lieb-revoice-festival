@@ -2,6 +2,8 @@ package lieb.revoice.festival;
 
 import java.awt.geom.Rectangle2D;
 
+import com.fazecast.jSerialComm.SerialPort;
+
 import de.gurkenlabs.litiengine.Direction;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.IUpdateable;
@@ -24,18 +26,28 @@ import de.gurkenlabs.litiengine.resources.Resources;
 public class Player extends Creature implements IUpdateable {
 
 	public static final int MAX_ADDITIONAL_JUMPS = 1;
- 
+
 	private static Player instance;
 
 	private final Jump jump;
 
 	private int consecutiveJumps;
-	
+
+	private static SerialPort comPort;
+
+	private char currentAcStatus;
+
 	private Player() {
 		super("frankmars");
 
 		// setup the player's abilities
-		this.jump = new Jump(this);	
+		this.jump = new Jump(this);
+
+		SerialPort.getCommPorts();
+		comPort = SerialPort.getCommPort("COM3");
+		comPort.openPort();
+
+		currentAcStatus = '0';
 	}
 
 	public static Player instance() {
@@ -51,7 +63,25 @@ public class Player extends Creature implements IUpdateable {
 		// reset the number of consecutive jumps when touching the ground
 		if (this.isTouchingGround()) {
 			this.consecutiveJumps = 0;
-		}	
+		}
+
+		try {
+			if (comPort.bytesAvailable() == 0) {
+
+			} else {
+				byte[] readBuffer = new byte[comPort.bytesAvailable()];
+				int numRead = comPort.readBytes(readBuffer, readBuffer.length);
+				currentAcStatus = (char) readBuffer[numRead - 1];
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		if (currentAcStatus == '1') {
+			this.jump();
+			currentAcStatus = '0';
+		}
+
 	}
 
 	@Override
@@ -70,6 +100,12 @@ public class Player extends Creature implements IUpdateable {
 		}
 
 		return Game.physics().collides(groundCheck, Collision.STATIC);
+	}
+
+	private void triggerHandler(String mapName, String triggerName) {
+		// See collision handler.
+		// this.onCollision(Game.world().getEnvironment(mapName).getTrigger(triggerName));
+		// this.hasCollision();
 	}
 
 	/**

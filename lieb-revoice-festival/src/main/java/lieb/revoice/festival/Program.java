@@ -26,7 +26,7 @@ public class Program {
 	    Game.window().setIcon(Resources.images().get("icon.png"));
 	    Game.screens().add(new MenuScreen());	   
 	    
-	    Game.graphics().setBaseRenderScale(4.001f);
+	    Game.graphics().setBaseRenderScale(4.001f); 
 	    
 	    Game.start(); 
 	    
