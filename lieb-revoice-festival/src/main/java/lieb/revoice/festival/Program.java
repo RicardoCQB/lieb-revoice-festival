@@ -10,8 +10,7 @@ public class Program {
 		
 		// Set information about the game
 	    Game.info().setName("Revoice Festival");
-	    Game.info().setSubTitle("Find your voice");
-	    Game.info().setVersion("v1.0");
+	    Game.info().setSubTitle("Find your voice");	    
 	    Game.info().setWebsite("https://github.com/RicardoCQB/lieb-revoice-festival");
 	    Game.info().setDescription("2D Platformer made with LITIengine,"
 	    		+ " also the jumps are controled with real life movements using an acelerometer.");

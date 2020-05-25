@@ -12,6 +12,7 @@ import de.gurkenlabs.litiengine.entities.CollisionInfo;
 import de.gurkenlabs.litiengine.entities.Creature;
 import de.gurkenlabs.litiengine.entities.EntityInfo;
 import de.gurkenlabs.litiengine.entities.MovementInfo;
+import de.gurkenlabs.litiengine.entities.Trigger;
 import de.gurkenlabs.litiengine.graphics.Spritesheet;
 import de.gurkenlabs.litiengine.graphics.animation.Animation;
 import de.gurkenlabs.litiengine.graphics.animation.AnimationController;
@@ -103,9 +104,15 @@ public class Player extends Creature implements IUpdateable {
 	}
 
 	private void triggerHandler(String mapName, String triggerName) {
-		// See collision handler.
-		// this.onCollision(Game.world().getEnvironment(mapName).getTrigger(triggerName));
-		// this.hasCollision();
+		
+		Game.world().addLoadedListener(e -> {
+			Trigger mapChanger = e.getTrigger(triggerName);
+			
+			if (mapChanger != null) {
+				mapChanger.spawn(Player.instance());				
+			}
+		});
+
 	}
 
 	/**
