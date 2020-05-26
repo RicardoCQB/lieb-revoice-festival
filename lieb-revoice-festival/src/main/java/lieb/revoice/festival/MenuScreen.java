@@ -18,7 +18,7 @@ import de.gurkenlabs.litiengine.util.Imaging;
 
 public class MenuScreen extends Screen implements IUpdateable {
 	public static final String SCREEN_NAME = "MENU";
-	private static final BufferedImage BG = Imaging.scale(Resources.images().get("startmenu.png"), Game.window().getWidth(), Game.window().getHeight());
+	private static final BufferedImage background = Imaging.scale(Resources.images().get("startmenu.png"), Game.window().getWidth(), Game.window().getHeight());
 	public static Sound MENU_MUSIC = Resources.sounds().get("menuMusic.wav");
 	private Menu mainMenu;
 
@@ -90,7 +90,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 
 	@Override
 	public void render(final Graphics2D g) {		
-		ImageRenderer.render(g, BG, 0, 0);
+		ImageRenderer.render(g, background, 0, 0);
 		if (Game.world().environment() != null) {
 			Game.world().environment().render(g);
 		}

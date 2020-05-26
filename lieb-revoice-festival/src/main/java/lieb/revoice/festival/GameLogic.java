@@ -31,9 +31,5 @@ public class GameLogic {
 				enter.spawn(Player.instance());				
 			}
 		});
-		
-		AccelerometerJump AJ = new AccelerometerJump();
-		
-		//Game.inputLoop().attach(AJ);
 	}
 }
