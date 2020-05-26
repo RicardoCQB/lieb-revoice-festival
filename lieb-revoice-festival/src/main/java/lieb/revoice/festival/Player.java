@@ -12,6 +12,7 @@ import de.gurkenlabs.litiengine.entities.CollisionInfo;
 import de.gurkenlabs.litiengine.entities.Creature;
 import de.gurkenlabs.litiengine.entities.EntityInfo;
 import de.gurkenlabs.litiengine.entities.MovementInfo;
+import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.entities.Trigger;
 import de.gurkenlabs.litiengine.graphics.Spritesheet;
 import de.gurkenlabs.litiengine.graphics.animation.Animation;
@@ -66,6 +67,8 @@ public class Player extends Creature implements IUpdateable {
 			this.consecutiveJumps = 0;
 		}
 
+		triggerHandler();
+		
 		try {
 			if (comPort.bytesAvailable() == 0) {
 
@@ -83,6 +86,7 @@ public class Player extends Creature implements IUpdateable {
 			currentAcStatus = '0';
 		}
 
+		
 	}
 
 	@Override
@@ -103,16 +107,32 @@ public class Player extends Creature implements IUpdateable {
 		return Game.physics().collides(groundCheck, Collision.STATIC);
 	}
 
-	private void triggerHandler(String mapName, String triggerName) {
-		
+	public void triggerHandler() {
+		String triggerName = "tents";
 		Game.world().addLoadedListener(e -> {
+			
 			Trigger mapChanger = e.getTrigger(triggerName);
 			
-			if (mapChanger != null) {
-				mapChanger.spawn(Player.instance());				
+			if (mapChanger.isActivated() && triggerName == "tents"){
+				Game.screens().add(new IngameScreen("tents"));
+				Game.screens().display("INGAME");
+								
+				Spawnpoint enter = e.getSpawnpoint("enter");
+				if (enter != null) {
+					enter.spawn(Player.instance());				
+				}
+			}
+			
+			else if(mapChanger.isActivated() && triggerName == "stages") {
+				Game.screens().add(new IngameScreen("stages"));
+				Game.screens().display("INGAME");
+								
+				Spawnpoint enter = e.getSpawnpoint("enter");
+				if (enter != null) {
+					enter.spawn(Player.instance());				
+				}
 			}
 		});
-
 	}
 
 	/**

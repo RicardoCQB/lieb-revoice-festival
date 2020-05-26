@@ -109,7 +109,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 		
 		Game.loop().perform(1500, () -> {
 			Game.window().getRenderComponent().fadeIn(1500);
-			Game.screens().add(new IngameScreen("stages"));
+			Game.screens().add(new IngameScreen("forest"));
 			Game.screens().display("INGAME");
 		});
 	}
