@@ -1,6 +1,6 @@
 # lieb-revoice-festival
 
-2d game platformer made with Java and LITIengine.
+2d game platformer made with Java and LITIengine [@gurkenlabs](https://github.com/gurkenlabs).
 
 It's about this singer who is trying to find his microphone as he runs along the levels in a music festival camp.
 
