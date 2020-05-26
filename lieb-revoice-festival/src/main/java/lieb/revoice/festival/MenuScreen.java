@@ -3,18 +3,22 @@ package lieb.revoice.festival;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.IUpdateable;
+import de.gurkenlabs.litiengine.graphics.ImageRenderer;
 import de.gurkenlabs.litiengine.resources.Resources;
 import de.gurkenlabs.litiengine.gui.ImageComponent;
 import de.gurkenlabs.litiengine.gui.Menu;
 import de.gurkenlabs.litiengine.gui.screens.Screen;
 import de.gurkenlabs.litiengine.input.Input;
 import de.gurkenlabs.litiengine.sound.Sound;
+import de.gurkenlabs.litiengine.util.Imaging;
 
 public class MenuScreen extends Screen implements IUpdateable {
 	public static final String SCREEN_NAME = "MENU";
+	private static final BufferedImage BG = Imaging.scale(Resources.images().get("startmenu.png"), Game.window().getWidth(), Game.window().getHeight());
 	public static Sound MENU_MUSIC = Resources.sounds().get("menuMusic.wav");
 	private Menu mainMenu;
 
@@ -37,7 +41,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 
 	@Override
 	protected void initializeComponents() {
-		super.initializeComponents();
+		super.initializeComponents();		
 		final double centerX = Game.window().getResolution().getWidth() / 2.0;
 		final double centerY = Game.window().getResolution().getHeight() * 1 / 2;
 		final double buttonWidth = 450;
@@ -85,7 +89,8 @@ public class MenuScreen extends Screen implements IUpdateable {
 	}
 
 	@Override
-	public void render(final Graphics2D g) {
+	public void render(final Graphics2D g) {		
+		ImageRenderer.render(g, BG, 0, 0);
 		if (Game.world().environment() != null) {
 			Game.world().environment().render(g);
 		}
