@@ -27,8 +27,7 @@ public class Program {
 	    
 	    Game.graphics().setBaseRenderScale(4.001f); 
 	    
-	    Game.start(); 
-	    
+	    Game.start(); 	   
 	}
 
 }

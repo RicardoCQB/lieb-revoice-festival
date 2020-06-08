@@ -84,9 +84,7 @@ public class Player extends Creature implements IUpdateable {
 		if (currentAcStatus == '1') {
 			this.jump();
 			currentAcStatus = '0';
-		}
-
-		
+		}		
 	}
 
 	@Override
