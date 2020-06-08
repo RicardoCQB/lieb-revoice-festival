@@ -21,6 +21,7 @@ import de.gurkenlabs.litiengine.input.PlatformingMovementController;
 import de.gurkenlabs.litiengine.physics.Collision;
 import de.gurkenlabs.litiengine.physics.IMovementController;
 import de.gurkenlabs.litiengine.resources.Resources;
+import de.gurkenlabs.litiengine.sound.Sound;
 
 @EntityInfo(width = 18, height = 18)
 @MovementInfo(velocity = 220)
@@ -38,6 +39,8 @@ public class Player extends Creature implements IUpdateable {
 	private static SerialPort comPort;
 
 	private char currentAcStatus;
+	
+	public static Sound PLAYER_JUMP = Resources.sounds().get("jump2.wav");
 
 	private Player() {
 		super("frankmars");
@@ -149,7 +152,7 @@ public class Player extends Creature implements IUpdateable {
 		if (this.consecutiveJumps >= MAX_ADDITIONAL_JUMPS || !this.jump.canCast()) {
 			return;
 		}
-
+		Game.audio().playSound((PLAYER_JUMP));
 		this.jump.cast();
 		this.consecutiveJumps++;
 	}

@@ -2,7 +2,6 @@ package lieb.revoice.festival;
 
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.resources.Resources;
-import de.gurkenlabs.litiengine.environment.tilemap.IMap;
 
 public class Program {
 
