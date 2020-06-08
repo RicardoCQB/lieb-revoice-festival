@@ -66,8 +66,6 @@ public class Player extends Creature implements IUpdateable {
 		if (this.isTouchingGround()) {
 			this.consecutiveJumps = 0;
 		}
-				
-		triggerHandler();		
 		
 		try {
 			if (comPort.bytesAvailable() == 0) {
@@ -103,41 +101,6 @@ public class Player extends Creature implements IUpdateable {
 		}
 
 		return Game.physics().collides(groundCheck, Collision.STATIC);
-	}
-
-	public void triggerHandler() {
-		String triggerName = "tents";
-		Game.world().addLoadedListener(e -> {
-			
-			Trigger mapChanger = e.getTrigger(triggerName);
-			
-			if (mapChanger.isActivated() && triggerName == "tents"){
-				
-				 Game.loop().perform(1500, () -> {
-				        Game.world().unloadEnvironment();
-				        Game.screens().current().suspend();
-				        Game.screens().add(new MenuScreen("tents"));
-						Game.screens().display("MENU_SCREEN");
-				      });			
-				Spawnpoint enter = e.getSpawnpoint("enter");
-				if (enter != null) {
-					enter.spawn(Player.instance());				
-				}
-			}			
-			
-			else if(mapChanger.isActivated() && triggerName == "stages") {
-				Game.loop().perform(1500, () -> {
-			        Game.world().unloadEnvironment();
-			        Game.screens().add(new MenuScreen("stages"));
-					Game.screens().display("MENU_SCREEN");
-			      });		
-								
-				Spawnpoint enter = e.getSpawnpoint("enter");
-				if (enter != null) {
-					enter.spawn(Player.instance());				
-				}
-			}
-		});
 	}
 
 	/**
