@@ -4,19 +4,16 @@ import java.awt.geom.Rectangle2D;
 
 import com.fazecast.jSerialComm.SerialPort;
 
-import de.gurkenlabs.litiengine.Direction;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.IUpdateable;
 import de.gurkenlabs.litiengine.entities.Action;
 import de.gurkenlabs.litiengine.entities.CollisionInfo;
 import de.gurkenlabs.litiengine.entities.Creature;
 import de.gurkenlabs.litiengine.entities.EntityInfo;
+import de.gurkenlabs.litiengine.entities.EntityListener;
 import de.gurkenlabs.litiengine.entities.MovementInfo;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.entities.Trigger;
-import de.gurkenlabs.litiengine.graphics.Spritesheet;
-import de.gurkenlabs.litiengine.graphics.animation.Animation;
-import de.gurkenlabs.litiengine.graphics.animation.AnimationController;
 import de.gurkenlabs.litiengine.input.PlatformingMovementController;
 import de.gurkenlabs.litiengine.physics.Collision;
 import de.gurkenlabs.litiengine.physics.IMovementController;
@@ -69,8 +66,8 @@ public class Player extends Creature implements IUpdateable {
 		if (this.isTouchingGround()) {
 			this.consecutiveJumps = 0;
 		}
-
-		triggerHandler();
+				
+		triggerHandler();		
 		
 		try {
 			if (comPort.bytesAvailable() == 0) {
@@ -115,18 +112,25 @@ public class Player extends Creature implements IUpdateable {
 			Trigger mapChanger = e.getTrigger(triggerName);
 			
 			if (mapChanger.isActivated() && triggerName == "tents"){
-				Game.screens().add(new IngameScreen("tents"));
-				Game.screens().display("INGAME");
-								
+				
+				 Game.loop().perform(1500, () -> {
+				        Game.world().unloadEnvironment();
+				        Game.screens().current().suspend();
+				        Game.screens().add(new MenuScreen("tents"));
+						Game.screens().display("MENU_SCREEN");
+				      });			
 				Spawnpoint enter = e.getSpawnpoint("enter");
 				if (enter != null) {
 					enter.spawn(Player.instance());				
 				}
-			}
+			}			
 			
 			else if(mapChanger.isActivated() && triggerName == "stages") {
-				Game.screens().add(new IngameScreen("stages"));
-				Game.screens().display("INGAME");
+				Game.loop().perform(1500, () -> {
+			        Game.world().unloadEnvironment();
+			        Game.screens().add(new MenuScreen("stages"));
+					Game.screens().display("MENU_SCREEN");
+			      });		
 								
 				Spawnpoint enter = e.getSpawnpoint("enter");
 				if (enter != null) {

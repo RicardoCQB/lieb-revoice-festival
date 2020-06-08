@@ -21,9 +21,11 @@ public class MenuScreen extends Screen implements IUpdateable {
 	private static final BufferedImage background = Imaging.scale(Resources.images().get("startmenu.png"), Game.window().getWidth(), Game.window().getHeight());
 	public static Sound MENU_MUSIC = Resources.sounds().get("menuMusic.wav");
 	private Menu mainMenu;
+	private String levelName;
 
-	public MenuScreen() {
+	public MenuScreen(String levelName) {
 		super(SCREEN_NAME);
+		this.levelName = levelName;
 	}
 
 	@Override
@@ -114,7 +116,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 		
 		Game.loop().perform(1500, () -> {
 			Game.window().getRenderComponent().fadeIn(1500);
-			Game.screens().add(new IngameScreen("tents"));
+			Game.screens().add(new IngameScreen(levelName));
 			Game.screens().display("INGAME");
 		});
 	}
