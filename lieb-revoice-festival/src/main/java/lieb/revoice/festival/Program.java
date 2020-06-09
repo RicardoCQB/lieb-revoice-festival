@@ -22,7 +22,7 @@ public class Program {
 	    
 	    // Set the icon for the game
 	    Game.window().setIcon(Resources.images().get("icon.png"));
-	    Game.screens().add(new MenuScreen("forest"));	   
+	    Game.screens().add(new MenuScreen());	   
 	    
 	    Game.graphics().setBaseRenderScale(4.001f); 
 	    

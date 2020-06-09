@@ -25,7 +25,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 
 	public MenuScreen(String levelName) {
 		super(SCREEN_NAME);
-		this.levelName = levelName;
+		this.levelName = "forest";
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 		final double centerY = Game.window().getResolution().getHeight() * 1 / 2;
 		final double buttonWidth = 450;
 
-		this.mainMenu = new Menu(centerX - buttonWidth / 2, centerY * 1.3, buttonWidth, centerY / 2, "Play", "Exit");
+		this.mainMenu = new Menu(centerX - buttonWidth / 2, centerY * 1, buttonWidth, centerY / 2, "Play Forest","Play Tents","Play Stages","Info", "Exit");
 
 		Input.keyboard().onKeyReleased(event -> {
 			if (this.isSuspended()) {
@@ -61,7 +61,6 @@ public class MenuScreen extends Screen implements IUpdateable {
 					comp.setHovered(false);
 				}
 				this.mainMenu.getCellComponents().get(this.mainMenu.getCurrentSelection()).setHovered(true);
-				// Game.audio().playSound("select.wav");
 			}
 
 			if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
@@ -70,16 +69,26 @@ public class MenuScreen extends Screen implements IUpdateable {
 					comp.setHovered(false);
 				}
 				this.mainMenu.getCellComponents().get(this.mainMenu.getCurrentSelection()).setHovered(true);
-				// Game.audio().playSound("select.wav");
 			}
 
 			if (event.getKeyCode() == KeyEvent.VK_ENTER || event.getKeyCode() == KeyEvent.VK_SPACE) {
-				// Game.audio().playSound("confirm.wav");
 				switch (this.mainMenu.getCurrentSelection()) {
 				case 0:
+					this.levelName = "forest";
 					this.startGame();
 					break;
 				case 1:
+					this.levelName = "tents";
+					this.startGame();
+					break;
+				case 2:
+					this.levelName = "stages";
+					this.startGame();
+					break;
+				case 3:
+					this.showInfo();
+					break;
+				case 4:
 					System.exit(0);
 					break;
 				}
@@ -112,6 +121,16 @@ public class MenuScreen extends Screen implements IUpdateable {
 	  }
 	
 	private void startGame() {
+		this.mainMenu.setEnabled(false);		
+		
+		Game.loop().perform(1500, () -> {
+			Game.window().getRenderComponent().fadeIn(1500);
+			Game.screens().add(new IngameScreen(levelName));
+			Game.screens().display("INGAME");
+		});
+	}
+	
+	private void showInfo() {
 		this.mainMenu.setEnabled(false);		
 		
 		Game.loop().perform(1500, () -> {
