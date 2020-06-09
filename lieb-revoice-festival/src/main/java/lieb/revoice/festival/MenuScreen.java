@@ -23,7 +23,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 	private Menu mainMenu;
 	private String levelName;
 
-	public MenuScreen(String levelName) {
+	public MenuScreen() {
 		super(SCREEN_NAME);
 		this.levelName = "forest";
 	}
