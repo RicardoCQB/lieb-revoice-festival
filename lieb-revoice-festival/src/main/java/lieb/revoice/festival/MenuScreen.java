@@ -48,7 +48,7 @@ public class MenuScreen extends Screen implements IUpdateable {
 		final double centerY = Game.window().getResolution().getHeight() * 1 / 2;
 		final double buttonWidth = 450;
 
-		this.mainMenu = new Menu(centerX - buttonWidth / 2, centerY * 1, buttonWidth, centerY / 2, "Play Forest","Play Tents","Play Stages","Info", "Exit");
+		this.mainMenu = new Menu(centerX - buttonWidth / 2, centerY * 1, buttonWidth, centerY / 2, "Play Forest","Play Tents","Play Stages", "Exit");
 
 		Input.keyboard().onKeyReleased(event -> {
 			if (this.isSuspended()) {
@@ -85,14 +85,10 @@ public class MenuScreen extends Screen implements IUpdateable {
 					this.levelName = "stages";
 					this.startGame();
 					break;
-				case 3:
-					this.showInfo();
-					break;
-				case 4:
+				case 3:				
 					System.exit(0);
 					break;
 				}
-
 			}
 		});
 
